@@ -27,29 +27,108 @@
         .navbar-nav {
             margin: auto;
         }
+        
+        h1 {
+            text-align: center;
+            color: brown;
+        }
+        
+        td {
+            text-align: center;
+            font-size: 18px;
+        }
+        
+        table {
+            margin-left: 5em;
+            margin-right: 5em;
+        }
+        
+        .nav-link {
+            font-size: larger;
+        }
     </style>
+    <script>
+        function show() {
+            var date = new Date(); //日期对象
+            var now = "";
+            now = "目前時間:";
+            now = now + date.getFullYear() + "年"; //读英文就行了
+            now = now + (date.getMonth() + 1) + "月"; //取月的时候取的是当前月-1如果想取当前月+1就可以了
+            now = now + date.getDate() + "日";
+            now = now + date.getHours() + "時";
+            now = now + date.getMinutes() + "分";
+            now = now + date.getSeconds() + "秒";
+            document.getElementById("nowDiv").innerHTML = now; //div的html是now这个字符串
+            setTimeout("show()", 1000); //设置过1000毫秒就是1秒，调用show方法
+        }
+    </script>
+    <!--———————————————— 版权声明：本文为CSDN博主「afterrains」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。 原文链接：https://blog.csdn.net/happy_jijiawei/article/details/47356089
+    -->
 </head>
 
-<body>
+<body id="top" onload="show()">
     <!-- Nav區塊 --->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="https://mis.npust.edu.tw/wp-content/uploads/2019/05/LOGO-D2-2S-1.png" alt=""></a>
+            <a class="navbar-brand" href="#top"><img src="https://mis.npust.edu.tw/wp-content/uploads/2019/05/LOGO-D2-2S-1.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			  </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">首頁</a>
+                        <a class="nav-link active" aria-current="page" href="#1">個人介紹</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">新聞</a>
+                        <a class="nav-link" href="#2">興趣與專長</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#3">未來期許</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#4">聯絡方式</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <h1 id="1">個人介紹</h1>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <td scope="col">姓名:侯宇炯</td>
+                <td scope="col">性別:男</td>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">學歷:</td>
+                <td>畢業於國立台東高級商業職業學校<br>正就讀國立屏東科技大學資訊管理系日四技一年級</td>
+
+            </tr>
+            <tr>
+                <td scope="row">取得過的證照:</td>
+                <td>
+                    電腦軟體應用 乙級<br>電腦軟體應用 丙級<br>網頁設計 丙級<br>TQC 電子商務概論 專業級<br>TQC Word 進階級<br>TQC Excel 進階級<br>TQC Powerpoint 進階級<br>TQC 中文輸入 進階級 64字/分<br>TQC英文輸入 進階級 45字/分<br>MOS Office Word Expert<br>MOS Office Excel Expert<br>MTA HTML&CSS程式語言核心能力
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1 id="2">興趣與專長</h1>
+    <p style="text-align: center;margin-left: 10em;margin-right: 10em;font-size: 18px;">我從小就接觸著電腦,所以對電腦相關事物都有非常大的熱忱, 對硬體的拆裝與程式邏輯上的理解,比別人更早了解一些,在高職期間,對於商業與資訊的課程不厭倦還培養出更多的興趣,想繼續深入了解商業和資訊的相關知識。<br>雖然現在才準備升大二，但對於學校的課程安排覺得非常滿意且充滿熱忱想去學習更多新事物, 我除了電腦也喜歡打籃球,在籃球上除了能訓練體力,能有著良好的體力外,也訓練了團體合作上的配合度,在投籃或是運球上能體悟到對事情的堅持及反覆地練習, 每一次的練習就越熟悉,越了解如何做會更有效率。
+    </p>
+    <h1 id="3">未來期許</h1>
+    <p style="text-align: center;margin-left: 10em;margin-right: 10em;font-size: 18px;">我對未來的期許，順利大學四年畢業，若有想學更多就去讀碩士、博士，希望未來的我能維持跟現在一樣一直反覆練習不熟悉的事物，畢竟我認為「一分耕耘,一分收獲」想要成功就一定要努力的付出, 想要一步登天可說是天方夜譚,唯有腳踏實地努力精進自己才方得甜 美的果實。但就算失敗了也不用覺得氣餒,有著永不放棄的精神,才 能使自己向前邁進,所以我希望未來能到科技公司上班, 當軟體程式設計師,未來自己參與開發的應用程式,能對社會有所幫 助及貢獻!!
+    </p>
+    <h1 id="4">聯絡方式</h1>
+    <p style="text-align: center;font-size: 18px;">E-mail:b10956004@mail.npust.edu.tw</p>
+
+    <footer style="text-align: center;font-size: 10px;">此用於(1092)互動式網頁設計(4032)期末作業
+        <div id="nowDiv">
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>
